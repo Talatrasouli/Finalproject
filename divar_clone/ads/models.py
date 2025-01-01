@@ -68,8 +68,6 @@ class Ad(models.Model):
     city= city=models.ForeignKey(City,on_delete=models.CASCADE,blank=True,null=True,related_name='advertisement_city')
     active=models.DateTimeField(default=timezone.now)
     status=models.CharField(max_length=3,choices=Status.choices,default=Status.INACTIVE)
-   
-    # user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='advertisement_user')
     
 
     objects=models.Manager()

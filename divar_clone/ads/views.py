@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.forms import modelformset_factory
 from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
-from .models import AdImage
+from .models import AdImage,Ad,Category
 
 
 
@@ -28,7 +28,24 @@ def create_ad(request):
 
 def ad_list(request):
     ads = Ad.active.all()
-    return render(request, 'ads/ad/ad_list.html', {'ads': ads})
+    min_price = request.GET.get('min_price')
+    max_price = request.GET.get('max_price')
+    category_name = request.GET.get('category')
+    status = request.GET.get('status')
+    if category_name:
+        category = get_object_or_404(Category, name=category_name)
+        ads = ads.filter(category=category)
+    if status:
+        ads = ads.filter(status=status)
+    if min_price:
+        ads = ads.filter(price__gte=min_price)
+    if max_price:
+        ads = ads.filter(price__lte=max_price)
+    search_query = request.GET.get('q', '')
+    if search_query:
+        ads = ads.filter(title__icontains=search_query)
+
+    return render(request, 'ads/ad/ad_list.html',{'ads': ads, 'search_query': search_query})
 
 def ad_detail(request,id):
     ad=get_object_or_404(Ad,id=id,status=Ad.status.ACTIVE)
