@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category,City,Advertisement
+from .models import Category,City,Ad
 
 # Register your models here.
 @admin.register(Category)
@@ -16,8 +16,8 @@ class CityAdmin(admin.ModelAdmin):
     search_fields=('name',)
 
 
-@admin.register(Advertisement)
-class AdvertisementAdmin(admin.ModelAdmin):
+@admin.register(Ad)
+class AdAdmin(admin.ModelAdmin):
     list_display=['title','category','created_at']
     list_filter=['title','category','created_at']
     search_fields=['title','category','created_at','overview']
