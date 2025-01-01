@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
+
 # Create your models here.
 
 class Category(models.Model):
@@ -31,12 +32,19 @@ class City(models.Model):
   
 #     def __str__(self):
 #         return self.user_name
+class ActiveManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(status=Ad.Status.ACTIVE)
+       
+
     
 class Ad(models.Model):
     class Status(models.TextChoices):
+      
         ACTIVE=('AC', 'Active')
         INACTIVE=('IAC', 'Inactive')
         PENDING=('PD','Pending')
+
         
     # CATEGORY_CHOICES = (
     #     ('electronics', 'electronics'),
@@ -58,9 +66,14 @@ class Ad(models.Model):
     phone_number=models.CharField(max_length=12)
     image=models.ImageField(upload_to='advertisement_images',null=True,blank=True)
     city= city=models.ForeignKey(City,on_delete=models.CASCADE,blank=True,null=True,related_name='advertisement_city')
+    active=models.DateTimeField(default=timezone.now)
     status=models.CharField(max_length=3,choices=Status.choices,default=Status.INACTIVE)
+   
     # user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='advertisement_user')
+    
 
+    objects=models.Manager()
+    active=ActiveManager()
 
     class Meta:
         ordering=['-created_at']

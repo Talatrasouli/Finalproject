@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.forms import modelformset_factory
-from .forms import AdForm, AdImageFormSet,AdImageForm
+from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage
 
 
@@ -23,4 +23,8 @@ def create_ad(request):
         ad_form = AdForm()
         formset = AdImageFormSet(queryset=AdImage.objects.none())
 
-    return render(request, 'create_ad.html', {'ad_form': ad_form, 'formset': formset})
+    return render(request, 'ads/create_ad.html', {'ad_form': ad_form, 'formset': formset})
+
+def ad_list(request):
+    ads = Ad.objects.all()
+    return render(request, 'ads/ad_list.html', {'ads': ads})

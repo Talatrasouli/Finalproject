@@ -1,0 +1,23 @@
+{% extends "ads/base.html" %}
+
+{% block title %}
+    My ADVERTISEMENT
+{% endblock title %}
+
+{% block content %}
+    <h1>My Advertisement</h1>
+    
+    {% for ad in ads %}
+        <h2>
+            <a href="{{ ad.get_absolute_url }}">
+                {{ ad.title }}
+            </a>
+        </h2>
+       
+        <p class="date">
+            Published {{ ad.publish }} by {{ ad.author }}
+        </p>
+        {{ ad.body|truncatewords:30|linebreaks }}
+    {% endfor %}
+    
+{% endblock content %}
