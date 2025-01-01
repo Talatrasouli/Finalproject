@@ -26,5 +26,5 @@ def create_ad(request):
     return render(request, 'ads/create_ad.html', {'ad_form': ad_form, 'formset': formset})
 
 def ad_list(request):
-    ads = Ad.objects.all()
-    return render(request, 'ads/ad_list.html', {'ads': ads})
+    ads = Ad.active.all()
+    return render(request, 'ads/ad/ad_list.html', {'ads': ads})
