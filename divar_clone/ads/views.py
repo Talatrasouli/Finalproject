@@ -1,8 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.forms import modelformset_factory
 from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage
-from django.http import Http404
+
 
 
 AdImageFormSet = modelformset_factory(AdImage, form=AdImageForm, extra=3)
@@ -31,8 +31,9 @@ def ad_list(request):
     return render(request, 'ads/ad/ad_list.html', {'ads': ads})
 
 def ad_detail(request,id):
-    try:
-        ad=Ad.active.get(id=id)
-    except Ad.DoesNotExist:
-        raise Http404('No Advertisement fount.')
+    ad=get_object_or_404(Ad,id=id,status=Ad.status.ACTIVE)
+    # try:
+    #     ad=Ad.active.get(id=id)
+    # except Ad.DoesNotExist:
+    #     raise Http404('No Advertisement fount.')
     return render(request,'ads/ad/detail.html',{'ad': ad})
