@@ -128,6 +128,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL='media/'
 MEDIA_ROOT=BASE_DIR/'media'
 
+# EMAIL_HOST='smpt.gmail.com'
+# EMAIL_HOST_USER='account@gmail.com'
+# EMAIL_HOST_PASSWORD=''
+# EMAIL_PORT=587
+# EMAIL_USE_TLS=True
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
 
 import logging
 logging.basicConfig(level=logging.DEBUG)

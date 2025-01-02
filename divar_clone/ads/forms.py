@@ -2,6 +2,12 @@ from django import forms
 from .models import Ad, AdImage
 from django.forms import modelformset_factory
 
+class EmailPostForm(forms.Form):
+    name=forms.CharField(max_length=50)
+    email=forms.EmailField()
+    to=forms.EmailField()
+    comment=forms.CharField(required=False,widget=forms.Textarea)
+
 class AdForm(forms.ModelForm):
     class Meta:
         model = Ad

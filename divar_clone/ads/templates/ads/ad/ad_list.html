@@ -9,7 +9,7 @@
   <h1>My advertisement</h1>
   {%for ad in ads%}
      <h2>
-        <a href="{%url 'ads:ad_detail' ad.id  %}"> 
+        <a href="{%url 'ads:ad_detail' ad.id  %}">
         
           {{ad.title}}
         </a>
@@ -19,5 +19,5 @@
      </p>
      {{ad.description|truncatewords:30|linebreaks}}
   {% endfor %}
-  {% include "pagination.html" with page=ads%}
+  {% include "pagination.html" with page=page_obj%}
 {% endblock content%} 
