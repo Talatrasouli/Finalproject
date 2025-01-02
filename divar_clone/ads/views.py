@@ -48,9 +48,5 @@ def ad_list(request):
     return render(request, 'ads/ad/ad_list.html',{'ads': ads, 'search_query': search_query})
 
 def ad_detail(request,id):
-    ad=get_object_or_404(Ad,id=id,status=Ad.status.ACTIVE)
-    # try:
-    #     ad=Ad.active.get(id=id)
-    # except Ad.DoesNotExist:
-    #     raise Http404('No Advertisement fount.')
-    return render(request,'ads/ad/detail.html',{'ad': ad})
+    ad=get_object_or_404(Ad,id=id)
+    return render(request,'ads/ad/ad_detail.html',{'ad': ad})

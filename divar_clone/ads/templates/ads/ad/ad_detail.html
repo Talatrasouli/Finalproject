@@ -1,0 +1,16 @@
+{% extends "ads/base.html"%}
+
+
+{% block title%}
+   {{ad.title}}
+{% endblock title%}
+
+{%block content%}
+  <h1>{{ad.title}}</h1>
+  <p class="date">
+    Published {{ad.publish}} by {{ad.owner}}
+  </p>
+  <p>
+    {{ad.description|linebreaks}}
+  </p>
+{%endblock content%}
