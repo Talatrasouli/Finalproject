@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.forms import modelformset_factory
 from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage,Ad,Category
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
 
 
@@ -27,7 +28,17 @@ def create_ad(request):
     return render(request, 'ads/create_ad.html', {'ad_form': ad_form, 'formset': formset})
 
 def ad_list(request):
-    ads = Ad.active.all()
+    ads= Ad.active.all()
+    paginator=Paginator(ads,per_page=4)
+    page_number = request.GET.get('page', 1)
+    
+    try:
+       ads = paginator.page(page_number)
+    except PageNotAnInteger:
+          ads = paginator.page(1)
+    except EmptyPage:
+       ads=paginator.page(paginator.num_pages)
+    
     min_price = request.GET.get('min_price')
     max_price = request.GET.get('max_price')
     category_name = request.GET.get('category')
@@ -47,6 +58,7 @@ def ad_list(request):
 
     return render(request, 'ads/ad/ad_list.html',{'ads': ads, 'search_query': search_query})
 
+
 def ad_detail(request,id):
-    ad=get_object_or_404(Ad,id=id)
+    ad=get_object_or_404(Ad,id=id,status=Ad.Status.ACTIVE)
     return render(request,'ads/ad/ad_detail.html',{'ad': ad})
