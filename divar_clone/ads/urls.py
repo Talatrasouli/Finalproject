@@ -6,8 +6,9 @@ app_name='ads'
 
 urlpatterns = [
 
-    # path('',views.ad_list,name='ad_list'),
-    path('',views.AdListView.as_view(),name='ad_list'),
+    path('',views.ad_list,name='ad_list'),
+    # path('',views.AdListView.as_view(),name='ad_list'),
+    path('tag/<slug:tag_slug>/',views.ad_list,name='ad_list_by_tag'),
     path('<int:id>/',views.ad_detail,name='ad_detail'),
     # path('<int:year>/<int:month>/<int:day>/<slug:ad_slug>',views.ad_detail,name='ad_detail')
     path('<int:ad_id>/share/',views.ad_share,name='ad_share'),

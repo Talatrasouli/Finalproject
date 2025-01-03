@@ -7,6 +7,7 @@ from django.views.generic import ListView
 from .forms import EmailAdvertisementForm,CommentForm
 from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
+from taggit.models import Tag
 
 
 
@@ -37,11 +38,16 @@ class AdListView(ListView):
     paginate_by=3
     template_name='ads/ad/ad_list.html'
 
-def ad_list(request):
+def ad_list(request,tag_slug=None):
     ads= Ad.active.all()
+
+    tag=None
+    if tag_slug:
+        tag=get_object_or_404(Tag,slug=tag_slug)
+        ads=ads.filter(tags__in=[tag])
+
     paginator=Paginator(ads,per_page=4)
     page_number = request.GET.get('page', 1)
-    
     try:
        ads = paginator.page(page_number)
     except PageNotAnInteger:
@@ -66,7 +72,7 @@ def ad_list(request):
     if search_query:
         ads = ads.filter(title__icontains=search_query)
 
-    return render(request, 'ads/ad/ad_list.html',{'ads': ads, 'search_query': search_query})
+    return render(request, 'ads/ad/ad_list.html',{'ads': ads,'tag':tag,'search_query': search_query})
 
 
 def ad_detail(request,id):

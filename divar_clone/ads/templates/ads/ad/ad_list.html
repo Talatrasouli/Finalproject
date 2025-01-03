@@ -7,17 +7,32 @@
 
 {% block content%}
   <h1>My advertisement</h1>
+  {%if tag%}
+    <h2>
+      Advertisements tagged with "{{tag.name}}"
+    </h2>
+  {%endif%}
   {%for ad in ads%}
      <h2>
         <a href="{%url 'ads:ad_detail' ad.id  %}">
-        
           {{ad.title}}
         </a>
      </h2>
+     {% comment %} {%if ad.tags.count%}
+       <p class='tags'>
+         Tags:{{ad.tags.all|join:", "}}
+       </p>
+     {%endif%} {% endcomment %}
+     {%for tag in ad.tags.all%}
+       <a href="{%url "ads:ad_list_by_tag" tag.slug%}">#{{tag.name}}</a>
+       {%if not forloop.last %}, {%endif%}
+     {%endfor%}
+     
      <p class="date">
        Published {{ad.publish}} by {{ad.owner}}
      </p>
      {{ad.description|truncatewords:30|linebreaks}}
   {% endfor %}
-  {% include "pagination.html" with page=page_obj%}
+  {% include "pagination.html" with page=ads%}
+  {% comment %} {% include "pagination.html" with page=page_obj%} {% endcomment %}
 {% endblock content%} 
