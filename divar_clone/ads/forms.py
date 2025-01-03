@@ -2,7 +2,7 @@ from django import forms
 from .models import Ad, AdImage,Comment
 from django.forms import modelformset_factory
 
-class EmailPostForm(forms.Form):
+class EmailAdvertisementForm(forms.Form):
     name=forms.CharField(max_length=50)
     email=forms.EmailField()
     to=forms.EmailField()

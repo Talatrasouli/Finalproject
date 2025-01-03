@@ -1,0 +1,18 @@
+{%extends "ads/base.html"%}
+
+{%block title%}
+    Add a comment
+{%endblock %}
+
+{% block content%}
+  {% if comment%}
+     <h2>
+       your comment has been added
+     </h2>
+     <a href="{{ad.get_absolute.url}}">
+       Back to Advertisement
+     </a>
+  {%else%}
+     {% include "ads/ad/includes/comment_form.html"%}
+  {% endif%}
+{% endblock%}

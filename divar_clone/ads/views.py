@@ -4,7 +4,7 @@ from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage,Ad,Category
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.views.generic import ListView
-from .forms import EmailPostForm,CommentForm
+from .forms import EmailAdvertisementForm,CommentForm
 from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
 
@@ -71,14 +71,17 @@ def ad_list(request):
 
 def ad_detail(request,id):
     ad=get_object_or_404(Ad,id=id,status=Ad.Status.ACTIVE)
-    return render(request,'ads/ad/ad_detail.html',{'ad': ad})
+    comments=ad.comments.filter(active=True)
+    form=CommentForm()
+    return render(request,'ads/ad/ad_detail.html',{'ad': ad,'comments':comments,'form':form})
+
 
 
 def ad_share(request,ad_id):
     ad=get_object_or_404(Ad,id=ad_id,status=Ad.Status.ACTIVE)
     sent=False
     if request.method=='POST':
-        form=EmailPostForm(request.POST)
+        form=EmailAdvertisementForm(request.POST)
         if form.is_valid():
             cd=form.cleaned_data
             ad_url=request.build_absolute_uri(
@@ -93,11 +96,11 @@ def ad_share(request,ad_id):
             sent=True
          
     else:
-        form=EmailPostForm()
+        form=EmailAdvertisementForm()
     return render(request,'ads/ad/share.html',{'ad':ad,'form':form,'sent':sent})
 
 @require_POST
-def post_comment(request,ad_id):
+def ad_comment(request,ad_id):
     ad=get_object_or_404(Ad,id=ad_id,status=Ad.Status.ACTIVE)
     comment=None
     form=CommentForm(data=request.POST)
