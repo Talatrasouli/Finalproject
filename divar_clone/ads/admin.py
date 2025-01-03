@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category,City,Ad
+from .models import Category,City,Ad,Comment
 
 # Register your models here.
 @admin.register(Category)
@@ -28,3 +28,8 @@ class AdAdmin(admin.ModelAdmin):
     date_hierarchy='publish'
     ordering=['status','-publish']
     
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display=['name','email','ad','created','active']
+    list_filter=['active','created']
+    search_fields=['name','email','body']
