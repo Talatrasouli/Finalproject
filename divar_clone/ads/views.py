@@ -4,8 +4,9 @@ from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage,Ad,Category
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.views.generic import ListView
-from .forms import EmailPostForm
+from .forms import EmailPostForm,CommentForm
 from django.core.mail import send_mail
+from django.views.decorators.http import require_POST
 
 
 
@@ -94,3 +95,14 @@ def ad_share(request,ad_id):
     else:
         form=EmailPostForm()
     return render(request,'ads/ad/share.html',{'ad':ad,'form':form,'sent':sent})
+
+@require_POST
+def post_comment(request,ad_id):
+    ad=get_object_or_404(Ad,id=ad_id,status=Ad.Status.ACTIVE)
+    comment=None
+    form=CommentForm(data=request.POST)
+    if form.is_valid():
+        comment=form.save(commit=False)
+        comment.ad=ad
+        comment.save()
+    return render(request,'ads/ad/comment.html',{'ad':ad,'form':form,'comment':comment})

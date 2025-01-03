@@ -1,5 +1,5 @@
 from django import forms
-from .models import Ad, AdImage
+from .models import Ad, AdImage,Comment
 from django.forms import modelformset_factory
 
 class EmailPostForm(forms.Form):
@@ -19,3 +19,10 @@ class AdImageForm(forms.ModelForm):
         fields = ['image']
 
 AdImageFormSet = modelformset_factory(AdImage, form=AdImageForm, extra=3)
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model=Comment
+        fields=['name','email','body']
+        
