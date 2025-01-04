@@ -8,6 +8,7 @@ from .forms import EmailAdvertisementForm,CommentForm
 from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
 from taggit.models import Tag
+from django.db.models import Count
 
 
 
@@ -72,6 +73,8 @@ def ad_list(request,tag_slug=None):
     if search_query:
         ads = ads.filter(title__icontains=search_query)
 
+    
+
     return render(request, 'ads/ad/ad_list.html',{'ads': ads,'tag':tag,'search_query': search_query})
 
 
@@ -79,7 +82,11 @@ def ad_detail(request,id):
     ad=get_object_or_404(Ad,id=id,status=Ad.Status.ACTIVE)
     comments=ad.comments.filter(active=True)
     form=CommentForm()
-    return render(request,'ads/ad/ad_detail.html',{'ad': ad,'comments':comments,'form':form})
+    ad_tag_ids=ad.tags.values_list('id',flat=True)
+    similar_ads=Ad.active.filter(tags__in=ad_tag_ids).exclude(id=ad.id)
+    similar_ads= similar_ads.annotate(same_tags_acount=Count('tags')).order_by('-same_tags_acount','publish')[:3]
+    return render(request,'ads/ad/ad_detail.html',{'ad': ad,'comments':comments,'form':form,'similar_ads':similar_ads})
+  
 
 
 

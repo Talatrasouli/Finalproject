@@ -43,8 +43,7 @@ class ActiveManager(models.Manager):
 
     
 class Ad(models.Model):
-    class Status(models.TextChoices):
-      
+    class Status(models.TextChoices):   
         ACTIVE=('AC', 'Active')
         INACTIVE=('IAC', 'Inactive')
         PENDING=('PD','Pending')
