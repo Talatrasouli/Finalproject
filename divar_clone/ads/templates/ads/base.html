@@ -1,3 +1,4 @@
+{%load  ads_tags%} 
 {% load static %}
 
 <!DOCTYPE html>
@@ -20,6 +21,21 @@
             <p>
                 This is my advertisement.
             </p>
+            <p>
+                Total Advertisement so far:{%total_ads%}
+            </p> 
+            <h3>Latest Advertisement</h3>
+            {% show_latest_ads %}
+            <h3>City Advertisement</h3>
+            <ul>
+                <li>chalous</li>
+                <li>tehran</li>
+            </ul>
+            <h3>Category Advertisement</h3>
+            <ul>
+                <li>Real_state</li>
+                <li>cars</li>
+            </ul>
            
         </div>
     </body>

@@ -32,6 +32,9 @@
        Published {{ad.publish}} by {{ad.owner}}
      </p>
      {{ad.description|truncatewords:30|linebreaks}}
+     <p>
+      Price:{{ad.price}}
+     </p>
   {% endfor %}
   {% include "pagination.html" with page=ads%}
   {% comment %} {% include "pagination.html" with page=page_obj%} {% endcomment %}

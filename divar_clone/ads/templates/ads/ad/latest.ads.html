@@ -1,0 +1,7 @@
+<ul>
+    {%for ad in latest_ads%}
+      <li>
+        <a href="{{ad.get_absolute_url}}">{{ad.title}}</a>
+      </li>
+    {%endfor%}
+</ul>

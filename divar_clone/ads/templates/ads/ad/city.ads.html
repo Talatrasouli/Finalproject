@@ -1,0 +1,13 @@
+
+<h1>Ads in {{ city_name }}</h1>
+<ul>
+    {% for ad in ads %}
+        <li>
+            <h2>{{ ad.title }}</h2>
+            <p>{{ ad.description }}</p>
+            <small>Posted on: {{ ad.created_at }}</small>
+        </li>
+    {% empty %}
+        <p>No ads available in {{ city_name }}</p>
+    {% endfor %}
+</ul> 

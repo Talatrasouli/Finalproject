@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.forms import modelformset_factory
 from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
-from .models import AdImage,Ad,Category
+from .models import AdImage,Ad,Category,City
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.views.generic import ListView
 from .forms import EmailAdvertisementForm,CommentForm
@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
 from taggit.models import Tag
 from django.db.models import Count
+from django.http import HttpResponse
 
 
 
@@ -122,3 +123,18 @@ def ad_comment(request,ad_id):
         comment.ad=ad
         comment.save()
     return render(request,'ads/ad/comment.html',{'ad':ad,'form':form,'comment':comment})
+
+# def city_ads_view(request,ad_id, city_name):
+#      return render(request, 'ads/ad/city_ads.html', {'city_name': city_name,'ad_id':ad_id})
+
+
+# def city_ads_view(request, city_name):
+#     return HttpResponse(f" City Name: {city_name}")
+
+def city_ads_view(request, city_name):
+    ads = Ad.objects.filter(city__name__iexact=city_name)
+    context = {
+        'city_name': city_name,
+        'ads': ads,
+    }
+    return render(request, 'ads/ad/city.ads.html', context)
