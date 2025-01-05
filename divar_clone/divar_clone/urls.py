@@ -20,9 +20,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ads/',include('ads.urls',namespace='ads'))
+    path('account/',include('account.urls')),
+    path('ads/',include('ads.urls',namespace='ads')),
    
    
 
