@@ -13,12 +13,13 @@ from django.http import HttpResponse
 from django.contrib.postgres.search import SearchVector
 from django.db.models import Value, CharField
 from django.db.models import Q
-
+from django.contrib.auth.decorators import login_required
 
 
 
 AdImageFormSet = modelformset_factory(AdImage, form=AdImageForm, extra=3)
 # Create your views here.
+@login_required
 def create_ad(request):
     if request.method == 'POST':
         ad_form = AdForm(request.POST)
@@ -49,6 +50,9 @@ class AdListView(ListView):
 def gallery_view(request):
     images = Ad.objects.all()  
     return render(request, 'ads/ad/ad_list.html', {'images': images})
+
+
+@login_required
 def ad_list(request,tag_slug=None):
     ads= Ad.active.all()
 
@@ -88,6 +92,7 @@ def ad_list(request,tag_slug=None):
     return render(request, 'ads/ad/ad_list.html',{'ads': ads,'tag':tag,'search_query': search_query})
 
 
+@login_required
 def ad_detail(request,id):
     ad=get_object_or_404(Ad,id=id,status=Ad.Status.ACTIVE)
     comments=ad.comments.filter(active=True)
@@ -99,7 +104,7 @@ def ad_detail(request,id):
   
 
 
-
+@login_required
 def ad_share(request,ad_id):
     ad=get_object_or_404(Ad,id=ad_id,status=Ad.Status.ACTIVE)
     sent=False
@@ -134,6 +139,8 @@ def ad_comment(request,ad_id):
     return render(request,'ads/ad/comment.html',{'ad':ad,'form':form,'comment':comment})
 
 
+
+@login_required
 def city_ads_view(request, city_name):
     ads = Ad.objects.filter(city__name__iexact=city_name)
     context = {
@@ -143,6 +150,7 @@ def city_ads_view(request, city_name):
     return render(request, 'ads/ad/city.ads.html', context)
 
 
+@login_required
 def ad_search(request):
     form = SearchForm()
     query = None
