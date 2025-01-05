@@ -1,0 +1,13 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Create new Advertisement</h2>
+    {{ ad_form.as_p }}
+    
+    <h3>image upload</h3>
+    {{ image_formset.management_form }}
+    {% for form in image_formset %}
+        {{ form.as_p }}
+    {% endfor %}
+    
+    <button type="submit">save</button>
+</form>

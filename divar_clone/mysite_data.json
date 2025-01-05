@@ -1,0 +1,1807 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-01-01T09:32:06.956Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-01-01T09:32:19.797Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "chalous",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-01-01T09:32:28.623Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "tehran",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-01-01T09:32:58.662Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "electronics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-01-01T09:33:14.501Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "fashion",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-01-01T09:33:28.381Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "real_estate",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-01-01T09:33:37.768Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "cars",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-01-01T09:33:48.632Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "samand",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-01-01T09:37:16.208Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-01-01T09:38:29.719Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "instructor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-01-01T09:39:17.295Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "test1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-01-01T09:40:11.847Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "test1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Superuser status\", \"Groups\", \"User permissions\", \"Last login\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-01-01T09:40:40.559Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-01-01T09:40:54.381Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "test",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-01-01T09:51:17.019Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Apartement",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-01-01T09:51:23.562Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "electronics",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-01-01T09:51:26.926Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "fashion",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-01-01T09:51:30.838Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "real_estate",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-01-01T09:51:34.709Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "samand",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-01-01T10:05:03.247Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Advertisement object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-01-01T10:05:58.246Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Family House",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-01-01T10:06:08.697Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Town House",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-01-01T10:06:18.906Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Modern Villa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-01-01T10:07:35.093Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Advertisement object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-01-01T10:08:04.918Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Apartement",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-01-01T10:08:09.339Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Family House",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-01-01T10:08:14.330Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Modern Villa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-01-01T10:08:17.466Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Town House",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-01-01T10:08:45.330Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "real-state",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-01-01T10:08:58.852Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "apartement",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-01-01T10:09:24.417Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Family House",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-01-01T10:09:33.231Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Apartement",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-01-01T10:09:41.943Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Real-State",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-01-01T10:10:05.374Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Town House",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-01-01T10:10:22.307Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Modern Villa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-01-01T10:11:43.012Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Advertisement object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-01-01T10:14:05.722Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Advertisement object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-01-01T10:15:10.678Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Advertisement object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-01-01T10:16:16.270Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Advertisement object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-01-01T10:22:20.075Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Ad object (6)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-01-01T13:50:41.430Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Ad object (7)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-01-03T17:06:29.344Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "apartemenet",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"tagged item\", \"object\": \"Ad object (3) tagged with apartemenet\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-01-03T19:50:44.004Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Ad object (6)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-01-03T19:51:16.473Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Ad object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-01-03T19:51:37.810Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Ad object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-01-03T19:51:44.544Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Ad object (2)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add city",
+    "content_type": 7,
+    "codename": "add_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change city",
+    "content_type": 7,
+    "codename": "change_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete city",
+    "content_type": 7,
+    "codename": "delete_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view city",
+    "content_type": 7,
+    "codename": "view_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add users",
+    "content_type": 8,
+    "codename": "add_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change users",
+    "content_type": 8,
+    "codename": "change_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete users",
+    "content_type": 8,
+    "codename": "delete_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view users",
+    "content_type": 8,
+    "codename": "view_users"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 9,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 9,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 9,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 9,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add advertisement",
+    "content_type": 10,
+    "codename": "add_advertisement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change advertisement",
+    "content_type": 10,
+    "codename": "change_advertisement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete advertisement",
+    "content_type": 10,
+    "codename": "delete_advertisement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view advertisement",
+    "content_type": 10,
+    "codename": "view_advertisement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 11,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 11,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 11,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 11,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add ad image",
+    "content_type": 12,
+    "codename": "add_adimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change ad image",
+    "content_type": 12,
+    "codename": "change_adimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete ad image",
+    "content_type": 12,
+    "codename": "delete_adimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view ad image",
+    "content_type": 12,
+    "codename": "view_adimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add ad",
+    "content_type": 10,
+    "codename": "add_ad"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change ad",
+    "content_type": 10,
+    "codename": "change_ad"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete ad",
+    "content_type": 10,
+    "codename": "delete_ad"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view ad",
+    "content_type": 10,
+    "codename": "view_ad"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 13,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 13,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 13,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 13,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 14,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 14,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 14,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 14,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add tagged item",
+    "content_type": 15,
+    "codename": "add_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change tagged item",
+    "content_type": 15,
+    "codename": "change_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete tagged item",
+    "content_type": 15,
+    "codename": "delete_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view tagged item",
+    "content_type": 15,
+    "codename": "view_taggeditem"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "instructor",
+    "permissions": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38,
+      39,
+      40,
+      25,
+      26,
+      27,
+      28,
+      41,
+      42,
+      43,
+      44,
+      29,
+      30,
+      31,
+      32,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$6s7ckGVqwXgVvaYDMdsbtM$kgEQ5MwWVmwhezcNUk41Xx9cs6TyKza03XtxpzFJhs4=",
+    "last_login": "2025-01-01T09:22:06.470Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-01-01T09:21:55.177Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$x8FXXSPl4Br3qCqicODPbw$Xv0D2y1W27U2JwiHRDsOjpO14UHaqxWtMAKd9jGZRpc=",
+    "last_login": "2025-01-01T09:40:09Z",
+    "is_superuser": true,
+    "username": "test",
+    "first_name": "test",
+    "last_name": "test",
+    "email": "test@test.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-01-01T09:39:16Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38,
+      39,
+      40,
+      25,
+      26,
+      27,
+      28,
+      41,
+      42,
+      43,
+      44,
+      29,
+      30,
+      31,
+      32,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "ads",
+    "model": "city"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "ads",
+    "model": "users"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "ads",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "ads",
+    "model": "ad"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "ads",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "ads",
+    "model": "adimage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "ads",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "taggit",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "taggit",
+    "model": "taggeditem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f1s7xi6fccrlvcqwis2yj5t7nfm04ri6",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-rFc2JT1niHbtFQkgW4qTKuLuJFIKaKaY92Y2NdC6jMPaZR6moq7Kqstvx5RfUg9QnlQfTedWl3lifSj6pF3fW5H37XT_Dkbq474WYIMxcqCMBWPysgc4sCExmpKBgEHAB3EErkQTIiImMMTeB7Dq8wXK7Ta6:1tSuvW:Iqhx0v0MQdxt6auwbviepJYNG89WT_4lt3QpgFwNZtU",
+    "expire_date": "2025-01-15T09:22:06.524Z"
+  }
+},
+{
+  "model": "ads.category",
+  "pk": 9,
+  "fields": {
+    "title": "Real-State",
+    "slug": "real-state",
+    "parent": null
+  }
+},
+{
+  "model": "ads.category",
+  "pk": 10,
+  "fields": {
+    "title": "Apartement",
+    "slug": "apartement",
+    "parent": 9
+  }
+},
+{
+  "model": "ads.category",
+  "pk": 11,
+  "fields": {
+    "title": "Family House",
+    "slug": "family-house",
+    "parent": 9
+  }
+},
+{
+  "model": "ads.category",
+  "pk": 12,
+  "fields": {
+    "title": "Town House",
+    "slug": "town-house",
+    "parent": 9
+  }
+},
+{
+  "model": "ads.category",
+  "pk": 13,
+  "fields": {
+    "title": "Modern Villa",
+    "slug": "modern-villa",
+    "parent": 9
+  }
+},
+{
+  "model": "ads.city",
+  "pk": 1,
+  "fields": {
+    "name": "chalous"
+  }
+},
+{
+  "model": "ads.city",
+  "pk": 2,
+  "fields": {
+    "name": "tehran"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 2,
+  "fields": {
+    "owner": 3,
+    "category": 13,
+    "title": "Luxury Family Home",
+    "slug": "luxury-family-home",
+    "overview": "Luxury Family Home",
+    "publish": "2025-01-01T10:10:45Z",
+    "created_at": "2025-01-01T10:11:42.975Z",
+    "updated": "2025-01-03T19:51:44.544Z",
+    "description": "Aliquam vitae sem id sem efficitur interdum. Phasellus ut nulla nisi. Sed varius, lacus ac laoreet pharetra, metus quam rutrum enim, quis rhoncu estibulum sed maximus elit. Quisque semper facilisis sem, sed tempus nisl laoreet sed. Donec ex turpis, pharetra luctus lacus quis, eleifend.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.",
+    "price": "15000.000",
+    "phone_number": "09351519454",
+    "image": "advertisement_images/property-img-1.jpg",
+    "city": 1,
+    "status": "AC"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 3,
+  "fields": {
+    "owner": 3,
+    "category": 10,
+    "title": "Romain Apartments",
+    "slug": "romain-apartments",
+    "overview": "Luxury Family Home",
+    "publish": "2025-01-01T10:13:03Z",
+    "created_at": "2025-01-01T10:14:05.702Z",
+    "updated": "2025-01-03T19:51:37.712Z",
+    "description": "Aliquam vitae sem id sem efficitur interdum. Phasellus ut nulla nisi. Sed varius, lacus ac laoreet pharetra, metus quam rutrum enim, quis rhoncu estibulum sed maximus elit. Quisque semper facilisis sem, sed tempus nisl laoreet sed. Donec ex turpis, pharetra luctus lacus quis, eleifend.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.",
+    "price": "16000.000",
+    "phone_number": "09351519454",
+    "image": "advertisement_images/property-img-2.jpg",
+    "city": 2,
+    "status": "AC"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 4,
+  "fields": {
+    "owner": 3,
+    "category": 11,
+    "title": "Matrix House",
+    "slug": "matrix-house",
+    "overview": "Luxury Family Home",
+    "publish": "2025-01-01T10:14:09Z",
+    "created_at": "2025-01-01T10:15:10.645Z",
+    "updated": "2025-01-01T10:15:10.645Z",
+    "description": "Aliquam vitae sem id sem efficitur interdum. Phasellus ut nulla nisi. Sed varius, lacus ac laoreet pharetra, metus quam rutrum enim, quis rhoncu estibulum sed maximus elit. Quisque semper facilisis sem, sed tempus nisl laoreet sed. Donec ex turpis, pharetra luctus lacus quis, eleifend.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.",
+    "price": "18000.000",
+    "phone_number": "09351519454",
+    "image": "advertisement_images/property-img-3.jpg",
+    "city": 1,
+    "status": "AC"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 5,
+  "fields": {
+    "owner": 3,
+    "category": 11,
+    "title": "Real Luxury Family House Villa",
+    "slug": "Real-uxury-Family-House-Villa",
+    "overview": "Luxury Family Home",
+    "publish": "2025-01-01T10:14:09Z",
+    "created_at": "2025-01-01T10:16:16.177Z",
+    "updated": "2025-01-03T19:51:16.361Z",
+    "description": "Aliquam vitae sem id sem efficitur interdum. Phasellus ut nulla nisi. Sed varius, lacus ac laoreet pharetra, metus quam rutrum enim, quis rhoncu estibulum sed maximus elit. Quisque semper facilisis sem, sed tempus nisl laoreet sed. Donec ex turpis, pharetra luctus lacus quis, eleifend.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.",
+    "price": "18000.000",
+    "phone_number": "09351519454",
+    "image": "",
+    "city": 1,
+    "status": "AC"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 6,
+  "fields": {
+    "owner": 3,
+    "category": 13,
+    "title": "Modern Villa",
+    "slug": "modern-villa",
+    "overview": "Luxury Family Home",
+    "publish": "2025-01-01T10:20:02Z",
+    "created_at": "2025-01-01T10:22:20.068Z",
+    "updated": "2025-01-03T19:50:43.876Z",
+    "description": "Aliquam vitae sem id sem efficitur interdum. Phasellus ut nulla nisi. Sed varius, lacus ac laoreet pharetra, metus quam rutrum enim, quis rhoncu estibulum sed maximus elit. Quisque semper facilisis sem, sed tempus nisl laoreet sed. Donec ex turpis, pharetra luctus lacus quis, eleifend.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.\r\n\r\nMany desktop publishing fact thagr or reader will distracted packages and webing page of their publishing for lorem ipsum’ will their infancy.",
+    "price": "13000.000",
+    "phone_number": "09351519454",
+    "image": "advertisement_images/property-img-5.jpg",
+    "city": 1,
+    "status": "AC"
+  }
+},
+{
+  "model": "ads.comment",
+  "pk": 1,
+  "fields": {
+    "ad": 6,
+    "name": "talat",
+    "email": "ta.rasouli60@yahoo.com",
+    "body": "Great advertisement",
+    "created": "2025-01-03",
+    "active": true
+  }
+},
+{
+  "model": "ads.comment",
+  "pk": 2,
+  "fields": {
+    "ad": 6,
+    "name": "Ali",
+    "email": "ali@a.com",
+    "body": "this is a beutiful villa",
+    "created": "2025-01-03",
+    "active": true
+  }
+},
+{
+  "model": "ads.comment",
+  "pk": 3,
+  "fields": {
+    "ad": 6,
+    "name": "talat",
+    "email": "ta.rasouli60@yahoo.com",
+    "body": "hi dear",
+    "created": "2025-01-04",
+    "active": true
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "villa",
+    "slug": "villa"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "apartemenet",
+    "slug": "apartemenet"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "familly house",
+    "slug": "familly-house"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "apartement",
+    "slug": "apartement"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "home",
+    "slug": "home"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "luxurt",
+    "slug": "luxurt"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "modern",
+    "slug": "modern"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "familly hose",
+    "slug": "familly-hose"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "lux",
+    "slug": "lux"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 2,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 1,
+    "content_type": 10,
+    "object_id": 3
+  }
+}
+]

@@ -4,12 +4,16 @@ from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage,Ad,Category,City
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.views.generic import ListView
-from .forms import EmailAdvertisementForm,CommentForm
+from .forms import EmailAdvertisementForm,CommentForm,SearchForm
 from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
 from taggit.models import Tag
 from django.db.models import Count
 from django.http import HttpResponse
+from django.contrib.postgres.search import SearchVector
+from django.db.models import Value, CharField
+from django.db.models import Q
+
 
 
 
@@ -32,7 +36,9 @@ def create_ad(request):
         ad_form = AdForm()
         formset = AdImageFormSet(queryset=AdImage.objects.none())
 
-    return render(request, 'ads/create_ad.html', {'ad_form': ad_form, 'formset': formset})
+    return render(request, 'ads/ad/create_ad.html', {'ad_form': ad_form, 'formset': formset})
+
+
 
 class AdListView(ListView):
     queryset=Ad.active.all()
@@ -40,6 +46,9 @@ class AdListView(ListView):
     paginate_by=3
     template_name='ads/ad/ad_list.html'
 
+def gallery_view(request):
+    images = Ad.objects.all()  
+    return render(request, 'ads/ad/ad_list.html', {'images': images})
 def ad_list(request,tag_slug=None):
     ads= Ad.active.all()
 
@@ -124,12 +133,6 @@ def ad_comment(request,ad_id):
         comment.save()
     return render(request,'ads/ad/comment.html',{'ad':ad,'form':form,'comment':comment})
 
-# def city_ads_view(request,ad_id, city_name):
-#      return render(request, 'ads/ad/city_ads.html', {'city_name': city_name,'ad_id':ad_id})
-
-
-# def city_ads_view(request, city_name):
-#     return HttpResponse(f" City Name: {city_name}")
 
 def city_ads_view(request, city_name):
     ads = Ad.objects.filter(city__name__iexact=city_name)
@@ -138,3 +141,22 @@ def city_ads_view(request, city_name):
         'ads': ads,
     }
     return render(request, 'ads/ad/city.ads.html', context)
+
+
+def ad_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+          
+            results = Ad.objects.filter(
+                Q(title__icontains=query) |  
+                Q(description__icontains=query) |  
+                Q(price__icontains=query)  
+            )
+
+    return render(request, 'ads/ad/search.html', {'form': form, 'query': query, 'results': results}) 

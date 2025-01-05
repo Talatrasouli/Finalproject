@@ -1,4 +1,5 @@
 {% extends "ads/base.html"%}
+{% load static %}
 
 
 {% block title%}
@@ -7,6 +8,7 @@
 
 {%block content%}
   <h1>{{ad.title}}</h1>
+  {% comment %} <img src="{% static 'ads/images/property-img-1.jpg' %}" alt="Description of image" width="300" height="200"> {% endcomment %}
   <p class="date">
     Published {{ad.publish}} by {{ad.owner}}
   </p>

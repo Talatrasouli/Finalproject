@@ -3,6 +3,11 @@ from django.conf import settings
 from django.utils import timezone
 from django.urls import reverse
 from taggit.managers import TaggableManager
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
+import os
+from datetime import datetime
+
 
 
 
@@ -39,6 +44,10 @@ class City(models.Model):
 class ActiveManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(status=Ad.Status.ACTIVE)
+
+def upload_to_dynamic(instance, filename):
+    today = datetime.now().strftime('%Y/%m/%d')
+    return os.path.join('uploads', today, filename)
        
 
     
@@ -67,7 +76,14 @@ class Ad(models.Model):
     description=models.TextField(blank=True)
     price=models.DecimalField(max_digits=20,decimal_places=3,null=True,blank=True)
     phone_number=models.CharField(max_length=12)
-    image=models.ImageField(upload_to='advertisement_images',null=True,blank=True)
+    # image = ProcessedImageField(
+    #     upload_to='uploads/',
+    #     processors=[ResizeToFill(300, 200)],
+    #     format='JPEG',
+    #     options={'quality': 90},
+    # )
+    image = models.ImageField(upload_to='uploads/')
+    # image=models.ImageField(upload_to='advertisement_images',null=True,blank=True)
     city= city=models.ForeignKey(City,on_delete=models.CASCADE,blank=True,null=True,related_name='advertisement_city')
     active=models.DateTimeField(default=timezone.now)
     status=models.CharField(max_length=3,choices=Status.choices,default=Status.INACTIVE)
@@ -93,7 +109,6 @@ class AdImage(models.Model):
 
     def __str__(self):
         return f"Image for {self.ad.title}"
-    
 
 class Comment(models.Model):
     ad=models.ForeignKey(Ad,on_delete=models.CASCADE,related_name='comments')

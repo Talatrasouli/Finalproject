@@ -1,0 +1,29 @@
+{% extends "ads/base.html"%}
+
+{%block title%}
+  Search
+{%endblock%}
+
+{%block content%}
+    {%if query%}
+        <h1>Advertisements containing "{{query}}"</h1>
+        {%for ad in results%}
+            <h3>
+               <a href="{{ad.get_absolut_url}}">{{ad.title}}</a>
+            </h3>
+            <p>{{ad.price}}</p> 
+            <p>{{ad.description|truncatewords:15}}</p> 
+        {%empty%}
+           <p>There is no result for "{{query}}"</p>
+        {%endfor%}
+        <div>
+           <a href="{%url "ads:ad_search"%}">Search again</a>
+        </div>
+    {%else%}
+      <h1>Search for Advertisements</h1>
+      <form method="get">
+          {{form.as_p}}
+          <input type="submit" value="search"/>
+      </form>
+  {%endif%}
+{% endblock%}

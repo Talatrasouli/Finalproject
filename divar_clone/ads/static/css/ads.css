@@ -90,3 +90,9 @@ input[type=submit] {
     font-size:12px;
     color:#666;
 }
+
+.responsive-image {
+    width: 100%; 
+    max-width: 300px;
+    height: auto; 
+}

@@ -18,7 +18,12 @@ class AdImageForm(forms.ModelForm):
         model = AdImage
         fields = ['image']
 
-AdImageFormSet = modelformset_factory(AdImage, form=AdImageForm, extra=3)
+        
+AdImageFormSet = modelformset_factory(
+    AdImage,
+    fields=('image',),
+    extra=3  
+)
 
 
 class CommentForm(forms.ModelForm):
@@ -26,3 +31,5 @@ class CommentForm(forms.ModelForm):
         model=Comment
         fields=['name','email','body']
         
+class SearchForm(forms.Form):
+    query=forms.CharField()
