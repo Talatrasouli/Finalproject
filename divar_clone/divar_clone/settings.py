@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'ads.apps.AdsConfig',
     'taggit',
     'django.contrib.postgres',
+    # 'django.contrib.sites',  
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +141,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+   
 ]
 
 # Default primary key field type
@@ -172,3 +178,27 @@ LOGOUT_REDIRECT_URL = '/account/login/'
 
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
+
+AUTHENTICATION_BACKENDS=[
+    'django.contrib.auth.backends.ModelBackend','account.authentication.EmailAuthBackend',
+    # 'django.contrib.auth.backends.ModelBackend',  
+    # 'account.authentication.EmailAuthBackend', 
+    # 'allauth.account.auth_backends.AuthenticationBackend', 
+]
+
+# SITE_ID = 1
+
+# ACCOUNT_LOGOUT_ON_GET = True
+# SOCIALACCOUNT_QUERY_EMAIL = True
+# SOCIALACCOUNT_PROVIDERS = {
+#     'google': {
+#         'SCOPE': [
+#             'profile',
+#             'email',
+#         ],
+#         'AUTH_PARAMS': {
+#             'access_type': 'online',
+#         },
+#     }
+# }

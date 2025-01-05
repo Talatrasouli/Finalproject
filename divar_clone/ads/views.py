@@ -52,7 +52,7 @@ def gallery_view(request):
     return render(request, 'ads/ad/ad_list.html', {'images': images})
 
 
-@login_required
+
 def ad_list(request,tag_slug=None):
     ads= Ad.active.all()
 

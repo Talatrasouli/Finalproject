@@ -15,13 +15,22 @@
   {%endif%}
   {%for ad in ads%}
      <h2>
+      
         <a href="{%url 'ads:ad_detail' ad.id  %}">
           {{ad.title}}
         </a>
-        <h3>images:</h3>
-        {% for image in ad.images.all %}
-           <img src="{{ image.image.url }}" alt="Ad Image" style="max-width: 300px;"> 
-        {% endfor %}
+     
+        
+        <div>
+          {% if ad.image %}
+            <img src="{{ ad.image.url }}" alt="Main Image" style="max-width: 300px;">
+          {% endif %}
+      
+        
+          {% for image in ad.images.all %}
+            <img src="{{ image.image.url }}" alt="Ad Image" style="max-width: 300px;">
+          {% endfor %}
+        </div>
      </h2>
      {% comment %} {%if ad.tags.count%}
        <p class='tags'>

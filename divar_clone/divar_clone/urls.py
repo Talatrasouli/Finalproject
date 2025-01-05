@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/',include('account.urls')),
     path('ads/',include('ads.urls',namespace='ads')),
+    # path('accounts/', include('allauth.urls')),
    
    
 
