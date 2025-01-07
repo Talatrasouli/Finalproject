@@ -3,7 +3,7 @@ from .models import Category,City,Ad,Comment
 
 # Register your models here.
 @admin.register(Category)
-class categoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display=('id','title','slug')
     search_fields=('title','slug',' parent')
     prepopulated_fields={

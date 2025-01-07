@@ -15,6 +15,7 @@
           <li {% if section == "dashboard" %}class="selected"{% endif %}>
             <a href="{% url "dashboard" %}">My dashboard</a>
           </li>
+          <li><a href="{%url 'ads:ad_list' %}">My Advertisement</a></li>
          
         </ul>
         {% endif %}

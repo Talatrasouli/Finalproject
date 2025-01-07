@@ -41,6 +41,8 @@ class City(models.Model):
   
 #     def __str__(self):
 #         return self.user_name
+
+
 class ActiveManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(status=Ad.Status.ACTIVE)
@@ -101,7 +103,11 @@ class Ad(models.Model):
         def __str__(self):
             return self.title
     def get_absolute_url(self):
-        return reverse("ads:ad_detail", args=[self.id])    
+        return reverse("ads:ad_detail", args=[self.id])   
+
+
+
+
 class AdImage(models.Model):
     ad = models.ForeignKey(Ad, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='ad_images/')
@@ -109,7 +115,9 @@ class AdImage(models.Model):
 
     def __str__(self):
         return f"Image for {self.ad.title}"
+    
 
+    
 class Comment(models.Model):
     ad=models.ForeignKey(Ad,on_delete=models.CASCADE,related_name='comments')
     name=models.CharField(max_length=64)

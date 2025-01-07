@@ -4,6 +4,9 @@ from .forms import Ad,AdForm, AdImageFormSet,AdImageForm
 from .models import AdImage,Ad,Category,City
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.views.generic import ListView
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView,UpdateView,DeleteView
+from django.urls import reverse_lazy
 from .forms import EmailAdvertisementForm,CommentForm,SearchForm
 from django.core.mail import send_mail
 from django.views.decorators.http import require_POST
@@ -41,15 +44,15 @@ def create_ad(request):
 
 
 
-class AdListView(ListView):
-    queryset=Ad.active.all()
-    context_object_name='ads'
-    paginate_by=3
-    template_name='ads/ad/ad_list.html'
+# class AdListView(ListView):
+#     queryset=Ad.active.all()
+#     context_object_name='ads'
+#     paginate_by=3
+#     template_name='ads/ad/ad_list.html'
 
-def gallery_view(request):
-    images = Ad.objects.all()  
-    return render(request, 'ads/ad/ad_list.html', {'images': images})
+# def gallery_view(request):
+#     images = Ad.objects.all()  
+#     return render(request, 'ads/ad/ad_list.html', {'images': images})
 
 
 
@@ -90,6 +93,41 @@ def ad_list(request,tag_slug=None):
     
 
     return render(request, 'ads/ad/ad_list.html',{'ads': ads,'tag':tag,'search_query': search_query})
+
+
+
+class OwnerMixin:
+    def get_queryset(self):
+        qs=super().get_queryset()
+        return qs.filter(self.request.user)
+    
+class OwnerEditMixin:
+    def form_valid(self, form):
+        form.instance.owner=self.request.user
+        return super().form_valid(form)
+
+class OwnerAdMixin(OwnerMixin):
+    model=Ad
+    fields=['category','title','slug','overview']
+    success_url='manage_ad_list'
+
+class OwnerAdEditMixin(OwnerAdMixin,OwnerEditMixin):
+    template_name='ads/manage/ad/form.html'
+
+class ManageAdListview(OwnerAdMixin,ListView):
+    template_name='ads/manage/ad/list.html'
+
+
+class AdCreateView(OwnerAdEditMixin,CreateView):
+    pass
+
+class AdUpdateView(OwnerAdEditMixin,UpdateView):
+    pass
+
+class AdDeleteView(OwnerAdMixin,DeleteView):
+    template_name='ads/manage/ad/delete.html'
+
+    
 
 
 @login_required
