@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیوار</title>
+</head>
+<body>
+    <header>
+        <h1>آگهی‌ها</h1>
+        <a href="#">ثبت آگهی جدید</a>
+    </header>
+    <main>
+        <ul>
+            {% for advertisementad in advertisements %}
+                <li>
+                    <h2>{{ advertisement.title }}</h2>
+                    <p>{{ advertisement.description }}</p>
+                    <p>قیمت: {{ advertisement.price }} تومان</p>
+                    <p>تاریخ: {{ advertisement.created }}</p>
+                </li>
+            {% empty %}
+                <li>هیچ آگهی‌ای وجود ندارد</li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

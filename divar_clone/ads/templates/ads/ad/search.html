@@ -19,11 +19,18 @@
         <div>
            <a href="{%url "ads:ad_search"%}">Search again</a>
         </div>
+      
     {%else%}
       <h1>Search for Advertisements</h1>
       <form method="get">
           {{form.as_p}}
           <input type="submit" value="search"/>
       </form>
+
+
+
+
+
+     
   {%endif%}
 {% endblock%}

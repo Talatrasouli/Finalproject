@@ -1,0 +1,20 @@
+<h1>Filter Advertisements</h1>
+<form method="get" action="">
+    {{ form.as_p }}
+    <button type="submit">Filter</button>
+</form>
+
+{% if query %}
+    <h2>Results for "{{ query }}"</h2>
+{% endif %}
+
+<ul>
+    {% for ad in results %}
+        <li>
+            <a href="{{ ad.get_absolute_url }}">{{ ad.title }}</a>
+            - {{ ad.price }} - {{ ad.city.name }}
+        </li>
+    {% empty %}
+        <li>No results found.</li>
+    {% endfor %}
+</ul>

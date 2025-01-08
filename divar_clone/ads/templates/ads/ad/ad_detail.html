@@ -18,11 +18,14 @@
   <p class="date">
     Published {{ad.publish}} by {{ad.owner}}
   </p>
+  <h4>
+    Price:{{ad.price}}
+  </h4>
   <p>
     {{ad.description|linebreaks}}
   </p>
   <h2>
-    {{ad.phone_number}}
+   phone : {{ad.phone_number}}
   </h2>
   <p>
     <a href="{%url "ads:ad_share" ad.id%}">Share this Advertisement</a>

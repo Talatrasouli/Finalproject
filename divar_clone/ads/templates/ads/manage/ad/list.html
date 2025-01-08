@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}My advertisements{% endblock %}
+
+{% block content %}
+  <h1>My advertisements</h1>
+  <div class="module">
+    {% for ad in object_list %}
+      <div class="ad-info">
+        <p>{{ad.image}}</p>
+        <h3>{{ ad.title }}</h3>
+        <h5>{{ ad.price}}</h5>
+      
+        
+        <p>
+          <a href="{% url "ads:ad_edit" ad.id %}">Edit</a>
+          <a href="{% url "ads:ad_delete" ad.id %}">Delete</a>
+        </p>
+
+      </div>
+    {% empty %}
+      <p>You haven't created any advertisements yet.</p>
+    {% endfor %}
+    <p>
+      <a href="{% url 'ads:ad_create' %}" class="button">Create new advertisement</a>
+    </p>
+  </div>
+{% endblock %}

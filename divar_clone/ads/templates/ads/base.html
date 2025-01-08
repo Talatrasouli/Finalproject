@@ -9,14 +9,29 @@
         <link href="{% static "css/ads.css" %}" rel="stylesheet" />   
     </head>
     
+    
     <body>
-
-       
+        
         {% if request.user.is_authenticated %}
         <ul class="menu">
+          <li>
+              <a href="{%url 'ads:ad_list' %}">Advertisements</a>
+          </li>
+          
           <li {% if section == "dashboard" %}class="selected"{% endif %}>
             <a href="{% url "dashboard" %}">My dashboard</a>
           </li>
+          <li>
+            <a href="{%url "ads:manage_ad_list"%}">My Advertisement</a>
+          </li>
+             
+          <li>
+            <a href="{%url "ads:ad_search"%}">Search</a>
+          </li>
+          <li>
+            <a href="{%url "ads:ad_filter"%}">Filter</a>
+          </li>
+        
          
         </ul>
         {% endif %}
@@ -35,8 +50,18 @@
             </p> 
             <h3>Latest Advertisement</h3>
             {% show_latest_ads %}
+
+           
+
             
-            <h3>City Advertisement</h3>
+
+
+           
+            
+          
+       
+            
+            {% comment %} <h3>City Advertisement</h3>
             <ul>
                 <li>chalous</li>
                 <li>tehran</li>
@@ -45,7 +70,7 @@
             <ul>
                 <li>Real_state</li>
                 <li>cars</li>
-            </ul>
+            </ul> {% endcomment %}
            
         </div>
     </body>

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ads.apps.AdsConfig',
     'taggit',
     'django.contrib.postgres',
+    'customers.apps.CustomersConfig',
     # 'django.contrib.sites',  
     # 'allauth',
     # 'allauth.account',

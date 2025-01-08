@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if object %}
+    Edit advertisement "{{ object.title }}"
+  {% else %}
+    Create a new advertisement
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <h1>
+    {% if object %}
+      Edit advertisement "{{ object.title }}"
+    {% else %}
+      Create a new advertisement
+    {% endif %}
+  </h1>
+ 
+  <div>
+    <h2>advertisement info</h2>
+    <form method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <p><input type="submit" value="Save advertisement"></p>
+    </form>
+  </div>
+{% endblock %}

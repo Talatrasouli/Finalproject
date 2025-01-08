@@ -12,6 +12,7 @@ from datetime import datetime
 
 
 
+
 # Create your models here.
 
 class Category(models.Model):
@@ -83,12 +84,13 @@ class Ad(models.Model):
     #     processors=[ResizeToFill(300, 200)],
     #     format='JPEG',
     #     options={'quality': 90},
-    # )
-    image = models.ImageField(upload_to='uploads/')
-    # image=models.ImageField(upload_to='advertisement_images',null=True,blank=True)
+    # # )
+    # image = models.ImageField(upload_to='uploads/')
+    image=models.ImageField(upload_to='ad_images/',null=True,blank=True)
     city= city=models.ForeignKey(City,on_delete=models.CASCADE,blank=True,null=True,related_name='advertisement_city')
     active=models.DateTimeField(default=timezone.now)
     status=models.CharField(max_length=3,choices=Status.choices,default=Status.INACTIVE)
+    
     
 
     objects=models.Manager()
@@ -115,6 +117,7 @@ class AdImage(models.Model):
 
     def __str__(self):
         return f"Image for {self.ad.title}"
+
     
 
     
@@ -132,5 +135,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'comment by {self.name} on {self.ad}'
+    
 
-
+# 
