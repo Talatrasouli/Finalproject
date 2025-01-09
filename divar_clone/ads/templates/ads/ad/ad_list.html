@@ -15,14 +15,56 @@
       Advertisements tagged with "{{tag.name}}"
     </h2>
   {%endif%}
+
+
+
   {%for ad in ads%}
-     <h2>
+
+   <div class="card" style="width: 18rem;">
+    <h2>
+      <a href="{%url 'ads:ad_detail' ad.id  %}">
+        {{ad.title}}
+      </a>
+      <div>
+        {% if ad.image %}
+          <img src="{{ ad.image.url }}" alt="Main Image" style="max-width: 300px;">
+        {% endif %}
+    
       
+        {% for image in ad.images.all %}
+          <img src="{{ image.image.url }}" alt="Ad Image" style="max-width: 300px;">
+        {% endfor %}
+      </div>
+   </h2>
+   {%for tag in ad.tags.all%}
+       <a href="{%url "ads:ad_list_by_tag" tag.slug%}">#{{tag.name}}</a>
+       {%if not forloop.last %}, {%endif%}
+     {%endfor%}
+     
+    <div class="card-body">
+      <p class="date">
+        Published {{ad.publish}} by {{ad.owner}}
+      </p>
+      {{ad.description|truncatewords:30|linebreaks}}
+      <p>
+       Price:{{ad.price}}
+      </p>
+        <a href="{%url 'ads:ad_detail' ad.id  %}">
+          go there
+        </a>
+    </div>
+  </div> 
+
+
+
+
+
+
+
+     {% comment %} <h2>
         <a href="{%url 'ads:ad_detail' ad.id  %}">
           {{ad.title}}
         </a>
-     
-        
         <div>
           {% if ad.image %}
             <img src="{{ ad.image.url }}" alt="Main Image" style="max-width: 300px;">
@@ -34,11 +76,7 @@
           {% endfor %}
         </div>
      </h2>
-     {% comment %} {%if ad.tags.count%}
-       <p class='tags'>
-         Tags:{{ad.tags.all|join:", "}}
-       </p>
-     {%endif%} {% endcomment %}
+    
      {%for tag in ad.tags.all%}
        <a href="{%url "ads:ad_list_by_tag" tag.slug%}">#{{tag.name}}</a>
        {%if not forloop.last %}, {%endif%}
@@ -50,8 +88,8 @@
      {{ad.description|truncatewords:30|linebreaks}}
      <p>
       Price:{{ad.price}}
-     </p>
+     </p> {% endcomment %}
   {% endfor %}
   {% include "pagination.html" with page=ads%}
-  {% comment %} {% include "pagination.html" with page=page_obj%} {% endcomment %}
+ 
 {% endblock content%} 

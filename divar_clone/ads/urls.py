@@ -21,6 +21,7 @@ urlpatterns = [
     path('mine/',
          views.ManageAdListview.as_view(),
          name='manage_ad_list'),
+   
     path('create/',
          views.AdCreateView.as_view(),
          name='ad_create'),

@@ -1,4 +1,64 @@
-{% extends "base.html" %}
+{% load static %}
+{% block title %}<h1>Advertisements</h1>{% endblock %}
+
+{% block content %}
+
+  {% if request.user.is_authenticated %}
+  <ul class="menu">
+    <li>
+        <a href="{%url 'ads:ad_list' %}">Advertisements</a>
+    </li>
+    
+    <li {% if section == "dashboard" %}class="selected"{% endif %}>
+      <a href="{% url "dashboard" %}">My dashboard</a>
+    </li>
+
+    {% comment %} <li>
+      <a href="{%url "ads:ad_search"%}">Search</a>
+    </li>
+    <li>
+      <a href="{%url "ads:ad_filter"%}">Filter</a>
+    </li> {% endcomment %}
+  
+   
+  </ul>
+  {% endif %}
+  <div class="container">
+    <div class="row ">
+      {% for ad in object_list %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            {% if ad.image %}
+            <img src="{{ ad.image.url }}" class="card-img-top custom-image " width=400,alt="{{ ad.title }}">
+          {% else %}
+            <img src="{% static 'placeholder.jpg' %}" class="card-img-top custom-image" alt="No Image Available">
+          {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ ad.title }}</h5>
+              <p class="card-text text-muted">{{ ad.price }}</p>
+              <p class="card-text text-muted">{{ad.overview}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="{% url 'ads:ad_edit' ad.id %}" class="btn btn-sm btn-primary">Edit</a>
+                <a href="{% url 'ads:ad_delete' ad.id %}" class="btn btn-sm btn-danger">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center">You haven't created any advertisements yet.</p>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="{% url 'ads:ad_create' %}" class="btn btn-success">Create New Advertisement</a>
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+{% comment %} {% extends "base.html" %}
 
 {% block title %}My advertisements{% endblock %}
 
@@ -25,4 +85,4 @@
       <a href="{% url 'ads:ad_create' %}" class="button">Create new advertisement</a>
     </p>
   </div>
-{% endblock %}
+{% endblock %} {% endcomment %}

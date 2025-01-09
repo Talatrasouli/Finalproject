@@ -121,7 +121,8 @@ class OwnerEditMixin:
 
 class OwnerAdMixin(OwnerMixin,LoginRequiredMixin,PermissionRequiredMixin):
     model=Ad
-    fields=['category','title','slug','overview','price','phone_number','image']
+    fields=['category','title','slug','overview','price','phone_number','image','city']
+    # success_url = reverse_lazy('ads:manage_ad_list')
     success_url = reverse_lazy('ads:manage_ad_list')
     def get_object(self,queryset=None):
         obj=super().get_object(queryset)
@@ -138,6 +139,7 @@ class ManageAdListview(OwnerAdMixin,ListView):
     template_name='ads/manage/ad/list.html'
     permission_required='ads.view_ad'
     ontext_object_name='ads'
+    # paginate_by=3
    
   
 

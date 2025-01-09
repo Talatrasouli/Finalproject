@@ -53,6 +53,15 @@ def upload_to_dynamic(instance, filename):
     return os.path.join('uploads', today, filename)
        
 
+class Users(models.Model):
+    email=models.EmailField(max_length=100,unique=True)
+    first_name=models.CharField(max_length=100)
+    last_name=models.CharField(max_length=100)
+    user_name=models.CharField(max_length=200)
+    phone_number=models.CharField(max_length=12)
+    slug=models.SlugField(max_length=200,unique=True)
+    def __str__(self):
+        return self.name
     
 class Ad(models.Model):
     class Status(models.TextChoices):   
@@ -67,6 +76,8 @@ class Ad(models.Model):
     #     ('real_estate', 'real_estate'),
     #     ('cars', 'cars'),
     # )
+
+    id = models.AutoField(primary_key=True)
 
     owner=models.ForeignKey(settings.AUTH_USER_MODEL,related_name='advertisements_created_by',on_delete=models.CASCADE)
     category=models.ForeignKey(Category,on_delete=models.CASCADE,related_name='advertisement_category')
@@ -90,6 +101,7 @@ class Ad(models.Model):
     city= city=models.ForeignKey(City,on_delete=models.CASCADE,blank=True,null=True,related_name='advertisement_city')
     active=models.DateTimeField(default=timezone.now)
     status=models.CharField(max_length=3,choices=Status.choices,default=Status.INACTIVE)
+    customers=models.ManyToManyField(settings.AUTH_USER_MODEL,related_name='ads_joined',blank=True)
     
     
 

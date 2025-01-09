@@ -142,3 +142,10 @@ input[type=submit] {
     float:right;
     padding-top:4px;
 }
+
+.custom-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* برای حفظ تناسب عکس */
+    border-radius: 5px; /* اختیاری: گوشه‌های گرد */
+  }

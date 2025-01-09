@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'taggit',
     'django.contrib.postgres',
     'customers.apps.CustomersConfig',
+    'rest_framework',
     # 'django.contrib.sites',  
     # 'allauth',
     # 'allauth.account',
@@ -140,10 +141,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
    
-]
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -203,3 +204,12 @@ AUTHENTICATION_BACKENDS=[
 #         },
 #     }
 # }
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
