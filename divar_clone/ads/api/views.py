@@ -30,11 +30,11 @@ class AdListView(generics.ListAPIView):
 class AdDetailView(generics.RetrieveAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdDetailSerializer
-    # permission_classes=[IsEnrolled]
+    permission_classes=[IsEnrolled]
     
 
 class AdEnrollView(APIView):
-    # authentication_classes=[BasicAuthentication]
+    authentication_classes=[BasicAuthentication]
     queryset=Ad.objects.all()
     permission_classes=[IsAuthenticated]
 
