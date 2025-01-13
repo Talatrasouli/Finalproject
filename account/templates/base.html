@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <span class="logo">Divar Clone</span>
+        {% if request.user.is_authenticated %}
+        <ul class="menu">
+          <li {% if section == "dashboard" %}class="selected"{% endif %}>
+            <a href="{% url "dashboard" %}">My dashboard</a>
+          </li>
+          <li><a href="{%url 'ads:ad_list' %}">Advertisements</a></li>
+        </ul>
+        {% endif %}
+        
+        
+        <span class="user">
+          {% if request.user.is_authenticated %}
+             Hello {{ request.user.first_name|default:request.user.username }},
+             <form method="POST" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button type="submit">Logout</button>
+          </form>
+          {% else %}
+            <a href="{% url "login" %}">Log-in</a>
+          {% endif %}
+          <span><a href="{% url "register" %}">Register</a></span>
+
+        </span>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% comment %} <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script> {% endcomment %}
+    {% comment %} <script>
+      const csrftoken = Cookies.get('csrftoken');
+      document.addEventListener('DOMContentLoaded', (event) => {
+        // DOM loaded
+        {% block domready %}
+        {% endblock %}
+      })
+    </script> {% endcomment %}
+</body>
+
+</html>
